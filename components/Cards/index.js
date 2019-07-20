@@ -25,7 +25,7 @@ const cardsContainer = document.querySelector(".cards-container"),
     .then(response => {
       const allArticles = Object.entries(response.data.articles);
       allArticles.map(topic => {
-        topic.map(item => {
+        topic[1].map(item => {
           cardsContainer.appendChild(Card(item));
         });
       });
@@ -62,3 +62,9 @@ const Card = item => {
 
   return card;
 }      
+
+
+
+
+
+
