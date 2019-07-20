@@ -59,11 +59,10 @@ const Card = item => {
   card.appendChild(cardAuthor);
   card.appendChild(cardHeadline);
   cardImgContainer.appendChild(cardImg);
+  cardAuthor.appendChild(cardImgContainer);
 
   return card;
 }      
-
-
 
 
 
