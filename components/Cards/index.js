@@ -38,5 +38,10 @@ const cardsContainer = document.querySelector(".cards-container"),
 
 
 const Card = item => {
-
+  const card = document.createElement("div");
+  const cardHeadline = document.createElement("div");
+  const cardAuthor = document.createElement("div");
+  const cardImgContainer = document.createElement("div");
+  const cardImg = document.createElement("img");
+  const cardSpan = document.createElement("span");
 }      
