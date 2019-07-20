@@ -35,3 +35,8 @@ const cardsContainer = document.querySelector(".cards-container"),
     .catch(err => {
         console.log(`Error: ${err}`);
       });
+
+
+const Card = item => {
+
+}      
