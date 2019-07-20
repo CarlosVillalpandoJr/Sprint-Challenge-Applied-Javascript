@@ -18,7 +18,7 @@ function Header() {
     dateSpan.textContent = 'SJULY 20, 2019';
     headerDiv.appendChild(dateSpan);
 
-    const headerH1 = document.createElemnt('h1');
+    const headerH1 = document.createElement('h1');
     headerH1.textContent = 'Lambda Times';
     headerDiv.appendChild(headerH1);
 
@@ -26,4 +26,11 @@ function Header() {
     tempSpan.classList.add('temp');
     tempSpan.textContent = '98*';
     headerDiv.appendChild(tempSpan);
+
+    return headerDiv;
 }
+
+const headerContainer = document.querySelector('.header-container')
+headerContainer.appendChild(Header());
+
+
