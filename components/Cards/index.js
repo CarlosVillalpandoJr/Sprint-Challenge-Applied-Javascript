@@ -45,9 +45,14 @@ const Card = item => {
   const cardImg = document.createElement("img");
   const cardSpan = document.createElement("span");
 
-  // Adding class names to elements
+  // Adding Class Names To Elements
   card.classList.add("card");
   cardHeadline.classList.add("headline");
   cardAuthor.classList.add("author");
   cardImgContainer.classList.add("img-container")
+
+  // Adding Text Content
+  cardHeadline.textContent = item.headline;
+  cardImg.src = item.authorPhoto;
+  cardSpan.textContent = item.authorName;
 }      
