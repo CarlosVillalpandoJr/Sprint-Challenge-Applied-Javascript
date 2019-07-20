@@ -23,12 +23,10 @@ const cardsContainer = document.querySelector(".cards-container"),
   getData = axios
     .get("https://lambda-times-backend.herokuapp.com/articles")
     .then(response => {
-        console.log(response);
       const allArticles = Object.entries(response.data.articles);
       allArticles.map(topic => {
         topic.map(item => {
-            console.log(topic);
-          cardsContainer.appendChild(createCards(item));
+          cardsContainer.appendChild(Card(item));
         });
       });
     })
@@ -55,4 +53,12 @@ const Card = item => {
   cardHeadline.textContent = item.headline;
   cardImg.src = item.authorPhoto;
   cardSpan.textContent = item.authorName;
+
+  // Appending elements to DOM
+  cardAuthor.appendChild(cardSpan);
+  card.appendChild(cardAuthor);
+  card.appendChild(cardHeadline);
+  cardImgContainer.appendChild(cardImg);
+
+  return card;
 }      
