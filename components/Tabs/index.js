@@ -12,6 +12,7 @@ const topics = document.querySelector(".topics"),
   getTopics = axios
     .get("https://lambda-times-backend.herokuapp.com/topics")
     .then(response => {
+        console.log(response);
       response.data.topics.map(topic => {
         const newTopic = document.createElement("div");
         newTopic.classList.add("tab");
